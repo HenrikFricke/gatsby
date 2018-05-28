@@ -1,6 +1,5 @@
 import * as React from "react";
 
-import * as PropTypes from "prop-types";
 import Helmet from "react-helmet";
 
 import { Header } from "../components/header";

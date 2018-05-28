@@ -1,0 +1,39 @@
+{
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "gatsby": "^1.9.261",
+    "gatsby-link": "^1.6.40",
+    "gatsby-plugin-react-helmet": "^2.0.10",
+    "gatsby-plugin-typescript": "^1.4.20",
+    "prop-types": "^15.6.1",
+    "react": "^16.4.0",
+    "react-helmet": "^5.2.0",
+    "typescript": "^2.8.3"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "graphql": "yarn graphql:schema && yarn graphql:ts",
+    "graphql:schema":
+      "apollo-codegen introspect-schema http://localhost:8000/___graphql --output schema.json",
+    "graphql:ts":
+      "apollo-codegen generate src/**/*.tsx --schema schema.json --target ts-modern --tag-name graphql"
+  },
+  "devDependencies": {
+    "@types/prop-types": "^15.5.3",
+    "@types/react": "^16.3.14",
+    "@types/react-helmet": "^5.0.6",
+    "apollo-codegen": "^0.19.1",
+    "prettier": "^1.12.0",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.13.0",
+    "tslint-eslint-rules": "^5.3.1",
+    "tslint-react": "^3.6.0"
+  }
+}

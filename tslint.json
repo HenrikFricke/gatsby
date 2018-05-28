@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "interface-name": [false]
+  },
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-eslint-rules",
+    "tslint-config-prettier"
+  ]
+}
